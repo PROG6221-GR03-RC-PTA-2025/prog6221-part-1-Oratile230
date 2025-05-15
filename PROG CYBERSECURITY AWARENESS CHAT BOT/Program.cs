@@ -1,36 +1,44 @@
 ﻿using System;
-using System.Speech.Synthesis; // Added for speech synthesis
+using System.Collections.Generic;  // Importing for generic collections
+using System.Speech.Synthesis;
 using System.Threading;
 
 namespace CybersecurityAwarenessBot
 {
     class Program
     {
+        private static string userName;
+        private static HashSet<string> interests = new HashSet<string>(); // Memory to store user's interests
+        private static SpeechSynthesizer synth = new SpeechSynthesizer();
+        private static Dictionary<string, List<string>> keywordResponses; // Collection for keyword responses
+
         static void Main(string[] args)
         {
             Console.Title = "Cybersecurity Awareness Bot";
 
-            GenerateVoiceGreeting(); // Directly generate and speak greeting
+            ConfigureSynthesizer();
+
+            GenerateVoiceGreeting();
 
             ShowAsciiArt();
             GreetUser();
+            InitializeKeywordResponses();
             ChatLoop();
         }
 
-        // Generate voice greeting using SpeechSynthesizer and speak it directly
+        // Configure SpeechSynthesizer
+        static void ConfigureSynthesizer()
+        {
+            synth.Rate = 0;
+            synth.Volume = 100;
+        }
+
+        // Generate voice greeting
         static void GenerateVoiceGreeting()
         {
             try
             {
-                using (SpeechSynthesizer synth = new SpeechSynthesizer())
-                {
-                    // Configure the synthesizer (Optional: Choose voice and rate)
-                    synth.Rate = 0; // Set speech rate (normal)
-                    synth.Volume = 100; // Set speech volume (100 is the max)
-
-                    // Speak greeting directly without saving it as a .wav file
-                    synth.Speak("Hello! Welcome to the Cybersecurity Awareness Bot. I'm here to help you stay safe online.");
-                }
+                synth.Speak("Hello! Welcome to the Cybersecurity Awareness Bot. I'm here to help you stay safe online.");
             }
             catch (Exception ex)
             {
@@ -38,7 +46,7 @@ namespace CybersecurityAwarenessBot
             }
         }
 
-        // ASCII Art
+        // Display ASCII Art
         static void ShowAsciiArt()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -54,12 +62,11 @@ namespace CybersecurityAwarenessBot
             Console.ResetColor();
         }
 
-
-        // User interaction
+        // Greet user and ask for their name
         static void GreetUser()
         {
             Console.Write("\nWhat is your name? ");
-            string userName = Console.ReadLine();
+            userName = Console.ReadLine();
 
             while (string.IsNullOrWhiteSpace(userName))
             {
@@ -70,6 +77,32 @@ namespace CybersecurityAwarenessBot
             DisplaySectionHeader("Welcome");
             TypeText($"Hello {userName}, welcome to the Cybersecurity Awareness Bot!");
             TypeText("I'm here to help you stay safe online.");
+        }
+
+        // Initialize keyword responses
+        static void InitializeKeywordResponses()
+        {
+            keywordResponses = new Dictionary<string, List<string>>()
+            {
+                { "password", new List<string>
+                    {
+                        "Make sure to use strong, unique passwords for each account.",
+                        "Avoid using personal information in your passwords.",
+                        "Consider using a password manager to keep track of your passwords."
+                    }},
+                { "scam", new List<string>
+                    {
+                        "Always verify the source of unexpected messages.",
+                        "Be careful of offers that seem too good to be true.",
+                        "Report any suspicious emails or messages."
+                    }},
+                { "privacy", new List<string>
+                    {
+                        "Review your privacy settings on social media.",
+                        "Be mindful of the information you share online.",
+                        "Consider anonymizing your online presence."
+                    }}
+            };
         }
 
         // Main chatbot loop
@@ -84,35 +117,47 @@ namespace CybersecurityAwarenessBot
 
                 input = Console.ReadLine().ToLower();
 
-                switch (input)
+                if (keywordResponses.ContainsKey(input))
                 {
-                    case "how are you?":
-                        TypeText("I'm secure and ready to help you stay safe online!");
-                        break;
-                    case "what's your purpose?":
-                        TypeText("I'm here to educate you about cybersecurity.");
-                        break;
-                    case "what can i ask you about?":
-                        TypeText("You can ask about password safety, phishing, and safe browsing.");
-                        break;
-                    case "password safety":
-                        TypeText("Use strong, unique passwords and enable two-factor authentication.");
-                        break;
-                    case "phishing":
-                        TypeText("Be cautious of emails asking for sensitive info. Always verify the source.");
-                        break;
-                    case "safe browsing":
-                        TypeText("Keep your software updated and avoid clicking suspicious links.");
-                        break;
-                    case "exit":
-                        TypeText("Goodbye! Stay safe online.");
-                        break;
-                    default:
-                        TypeText("I didn't quite understand that. Could you rephrase?");
-                        break;
+                    ProvideKeywordResponse(input); // Respond based on keywords
+                }
+                else
+                {
+                    HandleGeneralInquiry(input); // Handle general inquiries
                 }
 
             } while (input != "exit");
+        }
+
+        // Provide responses based on recognized keywords
+        static void ProvideKeywordResponse(string keyword)
+        {
+            Random rand = new Random();
+            int index = rand.Next(keywordResponses[keyword].Count);
+            TypeText(keywordResponses[keyword][index]);
+        }
+
+        // Handle general inquiries
+        static void HandleGeneralInquiry(string input)
+        {
+            switch (input)
+            {
+                case "how are you?":
+                    TypeText("I'm secure and ready to help you stay safe online!");
+                    break;
+                case "what's your purpose?":
+                    TypeText("I'm here to educate you about cybersecurity.");
+                    break;
+                case "what can i ask you about?":
+                    TypeText("You can ask about password safety, phishing, and safe browsing.");
+                    break;
+                case "exit":
+                    TypeText("Goodbye! Stay safe online.");
+                    break;
+                default:
+                    TypeText("I didn't quite understand that. Could you rephrase?");
+                    break;
+            }
         }
 
         // Typing effect

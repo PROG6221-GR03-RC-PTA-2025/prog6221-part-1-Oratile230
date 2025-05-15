@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "System.Speech/9.0.3": {
+      "System.Speech/9.0.5": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Speech.dll": {
@@ -27,10 +27,10 @@
     }
   },
   "libraries": {
-    "System.Speech/9.0.3": {
-      "sha512": "u75jktAY5Ee6DA1pXBRkWBaMpUGn+iunXt+qhqhreWjBRIcVjaSLpgxpYqA49eFBRWIfscbMvcHPLJMLyzTr6A==",
+    "System.Speech/9.0.5": {
+      "sha512": "nPZ2rcEVaZlxaLwBamFzz8f5MVM7Y08kzmDbcedXgeSWCGS9NN8mFjSsuTZm3W5pQLI4QhHmcu4h7A0Wf+cD/Q==",
       "type": "package",
-      "path": "system.speech/9.0.3",
+      "path": "system.speech/9.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -51,7 +51,7 @@
         "runtimes/win/lib/net8.0/System.Speech.xml",
         "runtimes/win/lib/net9.0/System.Speech.dll",
         "runtimes/win/lib/net9.0/System.Speech.xml",
-        "system.speech.9.0.3.nupkg.sha512",
+        "system.speech.9.0.5.nupkg.sha512",
         "system.speech.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -59,7 +59,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "System.Speech >= 9.0.3"
+      "System.Speech >= 9.0.5"
     ]
   },
   "packageFolders": {
@@ -115,7 +115,7 @@
         "dependencies": {
           "System.Speech": {
             "target": "Package",
-            "version": "[9.0.3, )"
+            "version": "[9.0.5, )"
           }
         },
         "imports": [
