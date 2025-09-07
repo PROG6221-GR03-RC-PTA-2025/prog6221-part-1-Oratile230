@@ -1,0 +1,18 @@
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.exe
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.deps.json
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.runtimeconfig.json
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.dll
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.pdb
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\System.Speech.dll
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Speech.dll
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.csproj.AssemblyReference.cache
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.AssemblyInfoInputs.cache
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.AssemblyInfo.cs
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.csproj.CoreCompileInputs.cache
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYB.DDFC37EC.Up2Date
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.dll
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\refint\PROG CYBERSECURITY AWARENESS CHAT BOT.dll
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.pdb
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\PROG CYBERSECURITY AWARENESS CHAT BOT.genruntimeconfig.cache
+C:\Users\RC_Student_lab\source\repos\PROG CYBERSECURITY AWARENESS CHAT BOT\obj\Debug\net8.0\ref\PROG CYBERSECURITY AWARENESS CHAT BOT.dll
